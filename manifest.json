@@ -1,0 +1,38 @@
+{
+  "author": "Daniel Melchor",
+  "version": "1.0.0",
+  "description": "Type ! in the search bar followed by a space, and execute any of the commands available.",
+  "manifest_version": 2,
+  "name": "!Bang",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "commands.js",
+      "extension-manager.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "history"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png",
+    "192": "icons/icon192.png",
+    "512": "icons/icon512.png"
+  },
+  "omnibox": {
+    "keyword": "@"
+  },
+  "commands": {
+    "special-search": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Start a !Bang search."
+    }
+  }
+}
